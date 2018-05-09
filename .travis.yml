@@ -3,12 +3,21 @@ jdk:
  - oraclejdk8
 sudo: false
 
+addons:
+  sonarcloud:
+    organization: "softmill"
+    token:
+      secure: "44049eba83d0b9b33ca261c675fb55175c2e0d90"
+      
 cache:
   directories:
-  - $HOME/.m2
+    - '$HOME/.m2/repository'
+    - '$HOME/.sonar/cache'
     
 install: true
     
 #script: "mvn clean verify"
 after_success:
-  - mvn clean verify -Pjacoco org.eluder.coveralls:coveralls-maven-plugin:report
+  - mvn clean verify -Pjacoco 
+  - mvn org.eluder.coveralls:coveralls-maven-plugin:report
+  - mvn sonar:sonar
