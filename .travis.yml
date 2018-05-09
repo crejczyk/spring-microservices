@@ -9,4 +9,4 @@ cache:
     
 #script: "mvn clean verify"
 after_success:
-  - mvn clean test org.jacoco:jacoco-maven-plugin:report org.eluder.coveralls:coveralls-maven-plugin:report
+  - mvn clean verify -Pjacoco org.eluder.coveralls:coveralls-maven-plugin:report
