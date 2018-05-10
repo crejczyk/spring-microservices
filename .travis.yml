@@ -7,7 +7,7 @@ addons:
   sonarcloud:
     organization: "crejczyk-github"
     token:
-      secure: "44049eba83d0b9b33ca261c675fb55175c2e0d90"
+      secure: "fc6c68da6c74b6178bf26bdac01ac698d21e5514"
       
 cache:
   directories:
