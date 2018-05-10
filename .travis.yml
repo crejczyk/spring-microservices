@@ -5,9 +5,9 @@ sudo: false
 
 addons:
   sonarcloud:
-    organization: "softmill"
+    organization: "crejczyk-github"
     token:
-      secure: "9fa5d2f620e38b07e8f421638fd751c9da052d22"
+      secure: "44049eba83d0b9b33ca261c675fb55175c2e0d90"
       
 cache:
   directories:
@@ -15,9 +15,6 @@ cache:
     - '$HOME/.sonar/cache'
     
 install: true
-    
-#script: "mvn clean verify"
+
 after_success:
-  #- mvn clean verify -Pjacoco org.eluder.coveralls:coveralls-maven-plugin:report 
-  #- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
   - mvn clean verify -Pjacoco org.eluder.coveralls:coveralls-maven-plugin:report sonar:sonar
