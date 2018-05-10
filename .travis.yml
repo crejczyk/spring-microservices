@@ -7,7 +7,7 @@ addons:
   sonarcloud:
     organization: "softmill"
     token:
-      secure: "44049eba83d0b9b33ca261c675fb55175c2e0d90"
+      secure: "9fa5d2f620e38b07e8f421638fd751c9da052d22"
       
 cache:
   directories:
