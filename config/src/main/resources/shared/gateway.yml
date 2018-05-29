@@ -25,7 +25,7 @@ zuul:
 
     account-service:
         path: /accounts/**
-        url: http://127.0.0.1:5000
+        serviceId: account-service
         stripPrefix: false
         sensitiveHeaders:
 
